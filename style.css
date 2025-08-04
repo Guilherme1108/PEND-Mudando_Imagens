@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --img-background: url("./img/lucci.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    height: 100dvh;
+    display: grid;
+    place-content: center;
+    background-position: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 400px;
+}
+
+.container input{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    gap: 64px;
+}
+
+.container button{
+    height: 64px;
+    width: 200px;
+    padding-block: 8px;
+}
+
+.fundo{
+background-image: var(--img-background);
+}
