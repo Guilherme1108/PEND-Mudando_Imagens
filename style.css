@@ -5,9 +5,7 @@
 }
 
 :root{
-    --img-background: url("./img/lucci.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    --img-background: url(./img/luffy.webp);
 }
 
 body{
@@ -15,6 +13,13 @@ body{
     display: grid;
     place-content: center;
     background-position: center;
+}
+.fundo{
+    background-image: var(--img-background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: aqua;
 }
 
 .container{
@@ -41,8 +46,4 @@ body{
     height: 64px;
     width: 200px;
     padding-block: 8px;
-}
-
-.fundo{
-background-image: var(--img-background);
 }
