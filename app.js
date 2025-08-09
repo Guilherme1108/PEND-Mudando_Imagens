@@ -1,14 +1,21 @@
 "use strict"
 
-const botaoTrocarImg = document.getElementById('trocar-img')
 
-function trocarImg(){
-    const img = document.getElementById('img').value
-    document.documentElement.style.setProperty( '--img-background', fundo)
-    console.log(img)
+const botaoTrocarImg = document.getElementById('trocar-img');
+
+function trocarImg() {
+    const nomeImg = document.getElementById('img').value.trim();
+
+    if (nomeImg){
+        let caminho = `./img/${nomeImg}${'.webp'}`;
+        document.documentElement.style.setProperty('--img-background', `url(${caminho})`);
+    } else {
+        let caminho = `./img/notFound.webp}`;
+        document.documentElement.style.setProperty('--img-background', `url(${caminho})`);   
+    }
+
 }
-
-botaoTrocarImg.addEventListener('click', trocarImg)
+botaoTrocarImg.addEventListener('click', trocarImg);
 
 
 
