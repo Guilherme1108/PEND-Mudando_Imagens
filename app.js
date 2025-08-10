@@ -4,21 +4,23 @@
 const botaoTrocarImg = document.getElementById('trocar-img');
 
 function trocarImg() {
+    //constante do nome dda imagem, o .value pega o valor e o .trim tira os espaços
     const nomeImg = document.getElementById('img').value.trim();
 
-    if (nomeImg){
+    if (nomeImg == 'doflamingo'|| nomeImg == 'kid' || nomeImg == 'law' || nomeImg == 'luffy' || nomeImg == 'lucci'){
+
+        //monta oque foi digitado com o caminho certo da imagem 
         let caminho = `./img/${nomeImg}${'.webp'}`;
+
+        //setando o caminho da imagem no root
         document.documentElement.style.setProperty('--img-background', `url(${caminho})`);
     } else {
-        let caminho = `./img/notFound.webp}`;
+        let caminho = `./img/notFound.webp`;
         document.documentElement.style.setProperty('--img-background', `url(${caminho})`);   
     }
 
 }
 botaoTrocarImg.addEventListener('click', trocarImg);
-
-
-
 
 
 //  ESTÁ TROCANDO PORÉM ELE ATIVA DIRETO, O BOTÃO NÃO ESTÁ FUNCIONANDO
