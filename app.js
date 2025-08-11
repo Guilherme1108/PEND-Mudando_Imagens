@@ -5,7 +5,7 @@ const botaoTrocarImg = document.getElementById('trocar-img');
 
 function trocarImg() {
     //constante do nome dda imagem, o .value pega o valor e o .trim tira os espaços
-    const nomeImg = document.getElementById('img').value.trim();
+    const nomeImg = document.getElementById('img').value;
 
     if (nomeImg == 'doflamingo'|| nomeImg == 'kid' || nomeImg == 'law' || nomeImg == 'luffy' || nomeImg == 'lucci'){
 
